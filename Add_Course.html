@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Static/css/Faculty_main.css"></link> 
+  <link rel="stylesheet" href="Static/css/Add_course.css"></link> 
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+    
+</head>
+<body>
+  <div class = 'row'>
+    
+    
+<div class = 'title1'>
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none;" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <ul>
+      <li><a href="Faculty_home.html" style="font-family: Arial, Helvetica, sans-serif; font-weight:10px">Take Attendance</a></li>
+      <li><a href="Edit_Attendance.html" style="font-family: Arial, Helvetica, sans-serif; font-weight:10px">Edit Attendance</a></li>
+      <li><a class="active"  href="Add_Course.html " style="font-family: Arial, Helvetica, sans-serif; font-weight:10px">Add Course</a></li>
+      <li><a href="#" style="font-family: Arial, Helvetica, sans-serif; font-weight:10px">Attendance Summary</a></li>
+    </ul>
+  </div>
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <div class="w3-container">
+    </div>
+  </div>
+  <div class="title1 abc" >
+    <header>
+      <h >Attendance Management</h>
+      </header>
+      
+    
+</div>
+  </div>
+      <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <div class = "add_course_form">
+          <form action="/action_page.php">
+            <label for="cname">Course Name</label>
+            <input type="text" id="cname" name="Coursename" placeholder="Course..">
+        
+            <label for="cid">Course ID</label>
+            <input type="text" id="cid" name="courseid" placeholder="Course ID..">
+            
+            <label for="Section">Section:</label>
+            <input type="text" id="Section" name="section " placeholder="Section ..">
+
+            <label for="csd">Course Start Date:</label>
+            <input type="date" id="csd" name="coursestartdate">
+            
+            <input type="submit" value="Submit">
+          </form>
+      </div>
+</div>
+
+</body>
+</html>

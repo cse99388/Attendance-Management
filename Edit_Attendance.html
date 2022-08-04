@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Static/css/Faculty_main.css"></link> 
+  <link rel="stylesheet" href="Static/css/Faculty_home.css"></link> 
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  
+    </script>
+    
+</head>
+<body>
+  <div class = 'row'>
+    
+    
+<div class = 'title1'>
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <ul>
+      <li><a  href="Faculty_home.html">Take Attendance</a></li>
+      <li><a class="active" href="Edit_Attendance.html">Edit Attendance</a></li>
+      <li><a href="Add_Course.html">Add Course</a></li>
+      <li><a href="#">Attendance Summary</a></li>
+    </ul>
+  </div>
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <div class="w3-container">
+    </div>
+  </div>
+  <div class="title1 abc" >
+    <h >Attendance Management</h>
+</div>
+  </div>
+  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+      <div class = "faculty_home_form">
+        <form class = "main">
+          <div>
+            <label for="Courses">Select :</label>
+          <select name="course" id="courses">
+            <option value = "c">Course</option>
+            <option value="c1">Course1</option>
+            <option value="c2">Course2</option>
+            <option value="c3">Course3</option>
+            <option value="c4">Course4</option>
+          </select>
+          </div>
+          <div>
+            <label for="Year">Select :</label>
+          <select name="Years" id="Year">
+            <option value = "y">Year</option>
+            <option value="y1">Year1</option>
+            <option value="y2">Year2</option>
+            <option value="y3">Year3</option>
+            <option value="y4">Year4</option>
+          </select>
+          </div>
+          <div>
+            <label for="Courses">Select :</label>
+          <select name="Section" id="section">
+            <opion value = "s">Section</option>
+            <optiotn value="s1">Section1</option>
+            <option value="s2">Section2</option>
+            <option value="s3">Section3</option>
+            <option value="s4">Section4</option>
+          </select>
+          </div>
+          <div>
+            <label for="Date">Date:</label>
+        <input type="date" id="Date" name="Date">
+          </div>
+          
+          <br><br>
+          
+          
+        </form>
+        <input type="submit" value="Submit">
+    </div>
+    
+</div>
+</div>
+
+</body>
+</html>
