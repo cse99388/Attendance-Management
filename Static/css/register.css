@@ -6,13 +6,13 @@ body {
     /* background-color: bisque; */
   }
   .login{
-      text-align: center;
+      /* text-align: center; */
       width: 30%;
       padding: 10px;
       border: 3px solid gray;
       border-radius : 6px;
       margin-left: 35%;
-      margin-top:10%;
+      margin-top:5%;
       box-shadow: 10px 10px 5px gray;
       font-family: 'Audiowide'
   }
@@ -28,12 +28,13 @@ body {
   }
   .p1{
       margin-left: 45%;
-      font-family: 'Audiowide';
+      font-family: italic;
       margin-top: -0.25%;
       margin-top: 1.5%;
+      font-family: 'Audiowide';
   }
   input{
-      margin-left:10%;
+      margin-left:25%;
       margin-right:5%;
       margin-top: 2.5%;
       margin-bottom: 2.5%;
@@ -42,7 +43,11 @@ body {
       border-top: none;
       border-left: none;
       border-right: none;
+      width: 55%;
 
+  }
+  label{
+    margin-left:20%;
   }
   .b1 {
       background-color: #581485;
@@ -54,15 +59,6 @@ body {
       font-size: 15px;
       cursor: pointer;
       margin-top: 5%;
+      margin-left:40%;
       width:20%
       }
-    .register{
-        width: fit-content;
-      height: fit-content;
-      border: 3px solid gray;
-      border-radius : 6px;
-      color:#C70039;
-      margin: 0;
-      margin-left: 40%;
-      margin-top:10%
-    }

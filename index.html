@@ -3,23 +3,28 @@
     <title>Login</title> 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <script src="https://kit.fontawesome.com/f76ed4a85d.js" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="Static/css/login_register.css"></link>  
+    <link rel="stylesheet" href="Static/css/login_register.css"></link> 
+    <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <br/>
     <header>
         <h class="title">Attendance Management</h>
         </header>
     
     <div class="login">
         <form>
-            <label style = "color:#900C3F"><i class="fa-solid fa-user"></i> College ID: </label><br/>
-            <input type="text" id="userName" name="userName" /><br/>
-            <label style = "color:#900C3F"><i class="fa-solid fa-key"></i> Password : </label><br/>
-            <input type="password" id="password" name="password" /><br/>
+            <br>
+            <label style = "color:#900C3F; margin-left: -25%;"><i class="fa-solid fa-user"></i> College ID: </label><br/>
+            <input type="text" id="userName" name="userName" placeholder="roll@edu"/><br/>
+            <label style = "color:#900C3F;margin-left: -25%;"><i class="fa-solid fa-key"></i> Password : </label><br/>
+            <input type="password" id="password" name="password" placeholder="ssecretkey" /><br/>
             <button type="submit" class = "b1">Login</button>
         </form>
-        
     </div>
     <p class = "p1">New Here!<a href = "Register.html" style = "color:#900C3F">Register</a></p>
-    <p class = "p1"><a href = "Faculty_home.html" style = "color:#900C3F">Skip and Visit</a></p>
+    <p class = "p1">Click here to <a href = "Faculty/Take_attendance.html" style = "color:#900C3F">Skip and Visit as Faculty</a></p>
+    <p class = "p1">Click here to <a href = "Student/Attendance_Summary.html" style = "color:#900C3F">Skip and Visit as Student</a></p>
 </body> 

@@ -1,0 +1,41 @@
+<?xml version = "1.0"?>
+<!DOCTYPE codata[
+    <!ELEMENT codata (indata)*>
+    <!ELEMENT indata (Collegeid, Full_name, password,  contact_number, mail_id, Gender)>
+    <!ELEMENT Collegeid (#PCDATA)>
+    <!ELEMENT Full_name (#PCDATA)>
+    <!ELEMENT password (#PCDATA)>
+
+    <!ELEMENT contact_number (#PCDATA)>
+    <!ELEMENT mail_id (#PCDATA)>
+    <!ELEMENT Gender (#PCDATA)>
+
+    <!ATTLIST Collegeid id1 CDATA #REQUIRED>
+    <!ATTLIST mail_id type1 CDATA #REQUIRED>
+    <!ATTLIST Gender type2 CDATA #REQUIRED>
+    <!ATTLIST Full_name type3 CDATA #REQUIRED>
+    <!ATTLIST password type4 CDATA #REQUIRED>
+    <!--<!ATTLIST confirm_password type5 CDATA #REQUIRED>-->
+    <!--<!ATTLIST Contact_number type6 CDATA #IMPLIED>-->
+]>
+
+<codata>
+    <indata>
+        <Collegeid id1 = "329">ROll@329</Collegeid>
+        <Full_name type3 = "k">Kaliki Sidhartha Reddy</Full_name>
+        <password >abc123</password>
+       
+        <!--<contact_number>1234567890</contact_number>-->
+        <mail_id type1="gmail">s@gmail.com</mail_id>
+        <Gender type2 = "m">male</Gender>
+    </indata>
+    <indata>
+        <Collegeid id1 = "329">ROll@329</Collegeid>
+        <Full_name type3 = "k">Kaliki Sidhartha Reddy</Full_name>
+        <password type4 = "a">abc123</password>
+        
+        <!--<contact_number>1234567890</contact_number>-->
+        <mail_id type1="gmail">s@gmail.com</mail_id>
+        <Gender type2 = "m">male</Gender>
+    </indata>
+</codata>

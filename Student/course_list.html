@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <title>
+        Courses
+    </title>
+    <style>
+        .box {
+            width: 80%;
+            border: 2px solid #900C3F;
+            border-radius:20px;
+            margin-left: 10%;
+            margin-top: 5%;
+            padding:1%;
+            background:rgba(255, 255, 255, 1);
+            }
+            #cont1{
+                display:none;
+                font-family: 'Audiowide';
+            }
+            #cont2{
+                display:none;
+                font-family: 'Audiowide';
+            }
+            #cont3{
+                display:none;
+                font-family: 'Audiowide';
+            }
+
+         
+            body{
+                background-image:linear-gradient(to right,#007991,#78ffd6);
+                
+            }
+            .btnx4{
+                background-color: grey;
+                border: 1px solid white;
+                border-radius:4px;
+                color: white;
+                cursor: pointer;
+                font-family: 'Audiowide';   
+            }   
+            .btnx4:hover{
+                background-color: grey;
+                color: goldenrod;
+                font-family: 'Angkor';
+            
+            }
+            .topnav {
+  overflow: hidden;
+  background-color:rgba(255, 255, 255, 0.2);
+  /* width:90% */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 3%;
+  width: 10%;
+}
+
+.topnav a:hover {
+  color: goldenrod;;
+  font-size: 20px;
+  font-family: 'Audiowide';
+}
+
+.topnav a.active {
+  color: white;
+  font-size: 20px;
+  font-family: 'Angkor';
+}
+.topnav a.active:hover {
+  color: goldenrod;
+  font-size: 20px;
+  font-family: 'Audiowide';
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* background-color:rgba(255, 255, 255, 0.2); */
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  font-family: 'Audiowide';
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+    </style>
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("cont1");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            }
+           
+            function myFunction2() {
+            var x = document.getElementById("cont2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            }  
+            function myFunction3() {
+            var x = document.getElementById("cont3");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            }   
+    </script>
+</head>
+<body> 
+    <div >
+        <div class = "row">
+          <div class="topnav" style="width : 90%"> 
+            <a class = "active" href="Attendance_Summary.html" >Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="course_list.html" >Courses</a>
+          </div>
+          <div  style = " width:10%; margin-top: 0%; background-color:rgba(255, 255, 255, 0.2);">
+            <div class = "dropdown">
+              <a href = "profile.html"style="border-radius: 30px;width: 100px;margin-left: 40%;"><img src="34.png" style="border-radius: 30px;width: 50px;margin-left: 55%;"></a>
+              <div class="dropdown-content">
+                <a href="profile.html">Profile</a>
+                <a href="#">Sign Out</a>
+              </div> 
+            </div>
+          </div>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    <div class = "box">
+        <div class = "row">
+            <h style = "margin-left : 0.5%; font-family: 'Angkor'; ">Course ID --- Course Name</h>
+            <button type="button" class="btnx4" onclick="myFunction1()" style="margin-left: 75%;">
+                show
+            </button>
+        </div>
+        <div id = "cont1">
+            <div class = "col">
+                <div class = "row">
+                    <h>Faculty: </h>
+                    <p>F1</p>
+                </div>
+                <div class = "row">
+                    <h>Year: </h>
+                    <p>2022</p>
+                </div>
+                <div class = "row">
+                    <h>Attendance: </h>
+                    <p>95%</p>
+                </div>
+                <div class = "row">
+                    <h>Total Number of Classes: </h>
+                    <p>100</p>
+                </div>
+                <div class = "row">
+                    <h>Total Number of Classes Absent: </h>
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "box">
+        <div class = "row">
+            <h style = "margin-left : 0.5%; font-family: 'Angkor'; ">Course ID --- Course Name</h>
+            <button type="button" class="btnx4" onclick="myFunction2()" style="margin-left: 75%;">
+                show
+            </button>
+        </div>
+        <div id = "cont2">
+            <div class = "col">
+                <div class = "row">
+                    <h>Faculty: </h>
+                    <p>F1</p>
+                </div>
+                <div class = "row">
+                    <h>Year: </h>
+                    <p>2022</p>
+                </div>
+                <div class = "row">
+                    <h>Attendance: </h>
+                    <p>95%</p>
+                </div>
+                <div class = "row">
+                    <h>Total Number of Classes: </h>
+                    <p>100</p>
+                </div>
+                <div class = "row">
+                    <h>Total Number of Classes Absent: </h>
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "box">
+        <div class = "row">
+            <h style = "margin-left : 0.5%; font-family: 'Angkor'; ">Course ID --- Course Name</h>
+            <button type="button" class="btnx4" onclick="myFunction3()" style="margin-left: 75%;">
+                show
+            </button>
+        </div>
+        <div id = "cont3">
+            <div class = "col">
+                <div class = "row">
+                    <h>Faculty: </h>
+                    <p>F1</p>
+                </div>
+                <div class = "row">
+                    <h>Year: </h>
+                    <p>2022</p>
+                </div>
+                <div class = "row">
+                    <h>Attendance: </h>
+                    <p>95%</p>
+                </div>
+                <div class = "row">
+                    <h>Total Number of Classes: </h>
+                    <p>100</p>
+                </div>
+                <div class = "row">
+                    <h>Total Number of Classes Absent: </h>
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
