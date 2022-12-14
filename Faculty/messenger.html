@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Take Attendance</title> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <script src="https://kit.fontawesome.com/f76ed4a85d.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/f76ed4a85d.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="Static/css/login_register.css"></link>  -->
+    <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<style>
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, grey, #666362);
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color:rgba(255, 255, 255, 0.2);
+  /* width:90% */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 3%;
+  width: 10%;
+}
+
+.topnav a:hover {
+  color: goldenrod;;
+  font-size: 20px;
+  font-family: 'Audiowide';
+}
+
+.topnav a.active {
+  color: white;
+  font-size: 20px;
+  font-family: 'Angkor';
+}
+.topnav a.active:hover {
+  color: goldenrod;
+  font-size: 20px;
+  font-family: 'Audiowide';
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* background-color:rgba(255, 255, 255, 0.2); */
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  font-family: 'Audiowide';
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+
+.parent{
+	width:23%;
+    height:170px;
+    float:left;
+   margin-left: 2%;
+   margin-top: 2%;
+
+}
+
+.card{
+    border: 1px solid #778899;
+    width:80%;
+    height:100px;
+    /* position: relative; */
+    background-color: white;
+    transition: width 1s, height 1s;
+    border-radius: 5px;padding-left: 5px;
+    font-family: "Audiowide";
+    overflow: hidden;
+
+}
+.card:hover {
+  width: 95%;
+  height: 150px;
+}
+.open-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  color: goldenrod;
+  width: 50px;
+  height: 50px;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  font-family: "Audiowide";
+}
+
+#rnum {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+#mse {
+  width: 100%;
+  height:100px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.rnum:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.mse:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  color: #04AA6D;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  margin-bottom:10px;
+  opacity: 0.5;
+}
+.form-container .cancel {
+  color: red;
+  margin-left: 50%;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.add_m {
+  position: sticky;
+  width: 50%;
+  bottom: 10px;
+  /* border: 3px solid #8AC007; */
+} 
+
+</style>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+<script>
+  var myApp = angular.module("controll", []);
+  
+  myApp.controller('controller', function($scope) {
+    $scope.records = [
+       {
+            "Name" : "Siddu",
+            "Message" : "Please come to office"
+        },{
+          "Name" : "Siddu",
+            "Message" : "Please come to office"
+        },{
+          "Name" : "Siddu",
+            "Message" : "Please come to office"
+        },{
+          "Name" : "Siddu",
+            "Message" : "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901"
+        }
+    ]
+     $scope.valid_send = function(event){  
+        if( $scope.rnum== undefined)
+        {
+          document.getElementById("error1").innerHTML=" is required"
+        }
+        else{
+          document.getElementById("error1").innerHTML=""
+        }
+        if( $scope.mse== undefined)
+        {
+          document.getElementById("error2").innerHTML=" is required"
+        }
+        else{
+          document.getElementById("error2").innerHTML=""
+        }
+        if( $scope.mse.length >= 121)
+        {
+          document.getElementById("error2").innerHTML=" should be max 121 length"
+        }
+        else{
+          console.log("$scope.mse.length")
+          document.getElementById("error2").innerHTML=""
+        }
+        if( $scope.mse.length <= 5)
+        {
+          document.getElementById("error2").innerHTML=" should be min 5 length"
+        }
+        else{
+          document.getElementById("error2").innerHTML=""
+        }
+     }
+  });
+</script>
+<!-- <script>
+  var mainApp = angular.module("data_values", []);
+  
+  mainApp.controller('get_data', function($scope) {
+     
+    
+  });
+</script> -->
+</head>
+<body>
+  <div >
+    <div class = "row">
+      <div class="topnav" style="width : 90%"> 
+        <a href="Take_attendance.html" >Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="course_list.html" >Courses</a>
+        <a class = "active" href = "messenger.html">Messenger</a>
+      </div>
+      <div  style = " width:10%; margin-top: 0%; background-color:rgba(255, 255, 255, 0.2);">
+        <div class = "dropdown">
+          <a href = "profile.html"style="border-radius: 30px;width: 100px;margin-left: 40%;"><img src="34.png" style="border-radius: 30px;width: 50px;margin-left: 55%;"></a>
+          <div class="dropdown-content">
+            <a href="profile.html">Profile</a>
+            <a href="#">Sign Out</a>
+          </div> 
+        </div>
+      </div>
+    </div>  
+  </div>
+  <!-- <div ng-app = "data_values">
+    <div ng-controller="get_data">
+      <div ng-repeat = "i in records" class = "parent">
+          <div class = "card">
+            <h>From : {{i.Name}}</h>
+              <p>Message : </p>
+              <p>{{i.Message}}</p>
+          </div>
+      </div>
+      </div>
+  </div> -->
+ 
+  <div ng-app = "controll" ng-controller = "controller">
+    <div ng-repeat = "i in records" class = "parent">
+      <div class = "card">
+        <h>From : {{i.Name}}</h>
+          <p>Message : </p>
+          <p>{{i.Message}}</p>
+      </div>
+  </div>
+  <div class = "add_m">
+    <button class="open-button" onclick="openForm()"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
+    <div class="form-popup" id="myForm" >
+      
+      <form class="form-container" name = "messenger_form">
+        <h1>Compose</h1>
+        <label for="rnum"><b>Roll Number</b><span id = "error1" style = "color : red"> </span></label>
+        
+        <input type="text" placeholder="Enter Roll" name="rnum" id = "rnum" ng-model = "rnum" >
+        
+        
+        <label for="mse"><b>Message</b><span id = "error2" style = "color : red"></span></label>
+        <!-- <p id = "nameerror" style="color: red; font-weight: bold"></p> -->
+        
+        <input id="mse" name = "mse"  placeholder="Enter Message within 121 characters" ng-model = "mse" ></input>
+        <button type="button" class="btn" ng-click = "valid_send()"><i class="fa-sharp fa-solid fa-share fa-2xl"></i></button>
+        <button type="button" class="btn cancel" onclick="closeForm()"><i class="fa-regular fa-circle-xmark fa-2xl"></i></button>
+      </form>
+  </div>
+
+</div>
+  </div>
+  
+ 
+
+
+  
+
+</body>
+</html>
+
+
