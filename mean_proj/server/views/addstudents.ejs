@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <title>Add Students</title>
+    <style>
+        
+         
+            body{
+                background-image:linear-gradient(to right,#007991,#78ffd6);
+                
+            }
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            input[type=submit] {
+                width: 100%;
+                background-color: gray;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type=submit] {
+        width: 100%;
+        background-color: gray;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    </style>
+    <script >
+        var myApp = angular.module("myapp", []);
+        myApp.controller("controller",function($scope){
+            $scope.Save = function () {
+                $localStorage.LocalMessage = $scope.content
+                
+            }
+            $scope.content = [];
+            
+            $scope.myfunction1 = function(){
+                var k  = $scope.add
+                var n = $scope.content.length
+                f = 0
+                for(var i = 0 ; i <n ;i++){
+                    if(k == $scope.content[i]){
+                        f = 1
+                        break
+                    }
+                }
+                if(f == 0){
+                    $scope.content.push(k)
+                }
+                console.log($scope.content)
+                document.getElementById('add').value = ""
+                document.getElementById('allst').value = $scope.content.join()
+            }
+            $scope.myfunction2 = function(){
+                
+                var t = []
+                var n = $scope.content.length
+                k = $scope.remove
+                for(var i = 0 ; i <n ;i++){
+                    if(k != $scope.content[i]){
+                        t.push($scope.content[i])
+                    }
+                }
+                $scope.content = t
+                document.getElementById('remove').value = ""
+                document.getElementById('allst').value = $scope.content.join()
+            }
+
+        })
+    </script>
+</head>
+<body>
+    
+    <div ng-app = "myapp" ng-controller="controller"  style="padding:1px 16px;height:fit-content; border: 5px solid red; border-radius:10px">
+        <form>
+            <input type= "text" id = "add" name = "add" required ng-model = 'add'>
+            <button  ng-click = "myfunction1()" >Add</button>
+        </form>
+        <br/>
+        <form>
+            <input type= "text" id = "remove" name = "remove" ng-required = "true" ng-model = 'remove'>
+            <button  ng-click = "myfunction2()">Remove</button>
+        </form><br/>
+    <form name = "form" method = "POST" action = "/addstudents">
+       
+        <label for = "section">Section</label><br/>
+        <input type = "text" id = "section" name = "section" ng-required = "true" ng-model = 'section' ><br/>
+        <span ng-show = "form.section.$touched && form.section.$error.required">Section is Required</span><br/>
+
+        
+        <label for = "cid">Course ID</label><br/>
+        <input type = "text" id = "cid" name = "cid" ng-required = "true" ng-model = 'cid' ><br/>
+        <span ng-show = "form.cid.$touched && form.cid.$error.required">Course is Required</span><br/>
+
+        <label for = "allst">Student added list</label>
+        <input type = "text" id = "allst" name = "allst" ng-required = "true" ng-model = "allst">
+        <button type = "Submit" ng-click = "Save()">Finish</button>
+    </form>
+    <a href = "/takeattendance" style="float: right; margin-top:10px"><button>Home</button></a>
+    <div ng-repeat = "i in content">
+        <p style = "background-color: grey; color:black; float:left; margin-left:2px">{{i}}</p>
+    </div>
+    </div>
+<br>
+<!-- <div id="showlines"></div> -->
+</body>

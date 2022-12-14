@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>Register</title> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <script src="https://kit.fontawesome.com/f76ed4a85d.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="Static/css/register.css"></link>
+    <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> 
+    <style>
+        .sub_row{
+   display: flex;
+   flex-flow: row wrap;
+   margin-left: 25%;
+}
+.sub_row_in{
+  width : fit-content;
+  height : fit-content;
+}
+  
+    </style>
+    <script>
+        // <div class="login" ng-app = "loginapp" ng-controller="logincontroller">
+            var app = angular.module('loginapp', []);
+            app.controller('logincontroller', function($scope) {
+                var chek = 0;
+                
+                $scope.change = function(){
+                    // console.log($scope.cpassword);
+                    return angular.equals($scope.cpassword,$scope.password);
+                }
+                // $scope.checkfunction=function(){
+                //     if (chek == 0){
+                //         chek = 1
+                        
+                //     }
+                //     else{
+                //         $scope.Section = ""
+                //         chek = 0
+                        
+                //     }
+                //     console.log(chek)
+                // }
+                // $scope.checking = function(){
+                //     if(chek == 0){
+                //         return 0
+                //     }
+                //     console.log(chek,$scope.Section)
+                //     if (chek == 1 && $scope.Section == "" || chek == 1 && $scope.Section == undefined){
+                //         return 1
+                //     }
+                //     return 0
+                // }
+            
+});
+</script>
+</head>
+<body>
+    <br/>
+    <header>
+        <h class="title">Attendance Management</h>
+        </header>
+        <div class="login" ng-app = "loginapp" ng-controller="logincontroller">
+       
+            <i class="fa-sharp fa-solid fa-triangle-exclamation" style = "display:none; color:red" id = "warn1"></i><p id = "warn" style = "color:red"></p>
+              <form action="/register" method="post" name = "form" >
+      
+      
+                  <label style = "color:#900C3F"><i class="fa-solid fa-user"></i> College ID: </label><br/>
+                  <input type="text" id="userName" name="userName" ng-model = "userName"  ng-required="true" /><br/>
+                  <span ng-show="form.userName.$touched && form.userName.$error.required">College ID is required.</span><br/>
+
+
+                  <label style = "color:#900C3F"><i class="fa-solid fa-user"></i> Name: </label><br/>
+                  <input type="text" id="Name" name="Name" ng-model = "Name"  ng-required="true" /><br/>
+                  <span ng-show="form.Name.$touched && form.Name.$error.required">Name is required.</span><br/>
+                  
+      
+                  <label style = "color:#900C3F"><i class="fa-solid fa-key"></i> Password : </label><br/>
+                  <input type="password" id="password" name="password" ng-model = "password" ng-required="true"  />
+                  <span ng-show="form.password.$touched && form.password.$error.required">Password is required.</span>
+                  <!-- <span ng-show="studentForm.password.$error.$minlength">minimum Length of 6.</span><br/><br/> -->
+                  <br/>
+      
+      
+                  <label style = "color:#900C3F"><i class="fa-solid fa-key"></i> Confirm Password : </label><br/>
+                  <input ng-change="change()" ng-model="cpassword" type="password" id="cpassword" name="cpassword" ng-required="true" /><br/>
+                  <span ng-show="form.cpassword.$touched && form.cpassword.$error.required">Password is required.</span><br/>
+                  <span ng-show = "!change()"> Please Confirm Password Correctly</span><br/>
+                  <!-- <p id = "error" ></p> -->
+      
+      
+                  <label style = "color:#900C3F"><i class="fa-solid fa-key"></i> Contact Number : </label><br/>
+                  <input type="number" id="pnumber" name="pnumber" ng-model = "pnumber" min="1000000000" max="9999999999" ng-required ="true" /><br/>
+                  <span ng-show = "form.pnumber.$touched && form.pnumber.$error.required">Phone Number is Required</span><br/>
+      
+      
+      
+      
+      
+                  <label style = "color:#900C3F"><i class="fa-solid fa-key"></i> Mail ID : </label><br/>
+                  <input type="email" id="pmail" name="pmail" ng-required = "true" /><br/>
+                  <span ng-show = "form.pmail.$touched && form.pmail.$error.required">Email is Required</span><br/>
+      
+
+                  <label style = "color:#900C3F" for = "Seciton">Section</label>
+                  <input type="text" id="Section" name="Section" id="Section" ng-model = "Section" ng-required = "true" placeholder = "Faculty register as faculty"/><br/>
+                  <span ng-show = "form.Section.$touched && form.Section.$error.required">Section is Required</span><br/>
+
+
+
+
+                  <!-- <label for = "checbox">Student</label>
+                  <input type = "checkbox" ng-model = "showHide1" id="checkbox" name="checkbox" ng-change = "checkfunction()">
+                  <div ng-show = "showHide1">
+                      
+                      
+                  </div>
+                  <span ng-show="checking()">Section is required.</span><br/>
+                  <br/> -->
+
+
+                  <label style = "color:#900C3F" for = "DateofB">DOB</label>
+                  <input type="Date" id="DateofB" name="DateofB" id="DateofB" ng-model = "DateofB" ng-required = "true" /><br/>
+                  <!-- <span ng-show = "form.DOB.$error.required">DOB is Required</span><br/> -->
+
+
+                  <div style = "color:#900C3F" class = "sub_row">
+                    <div class = "sub_row_in">
+                      Gender:
+                    </div>
+                    <div class = "sub_row_in">
+                      <input type="radio" id="gender_Male" name="gender" ng-model = 'gender' value="Male" ng-required = "true">
+                      <label for="gender_Male">Male</label>
+                    </div>
+                    <div class = "sub_row_in">
+                      <input type="radio" id="gender_Female" name="gender" value="Female" >
+                      <label for="gender_Female">Female</label>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <button type="submit" class = "b1" style = "width:fit-content" ng-disabled="form.userName.$touched && form.userName.$error.required || form.userName.$untouched || form.password.$untouched || form.cpassword.$untouched  || form.password.$touched && form.password.$error.required || form.Section.$touched && form.Section.$error.required ||!change() || form.pnumber.$touched && form.pnumber.$error.required || form.pmail.$touched && form.pmail.$error.required || form.Name.$touched && form.Name.$error.required" >Register</button>
+              </form>
+          </div>
+          </div>
+          
+          
+          <p class = "p1">Click Here!<a href = "/" style = "color:#900C3F">login</a></p>
+      
+
+    
+</body> 

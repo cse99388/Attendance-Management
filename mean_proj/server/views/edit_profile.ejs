@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<head>
+  <title>NALA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all"> -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> 
+ 
+
+
+
+  <style>
+    #top1{
+	background-color: #7393B3;
+    font-family: "Audiowide";
+}
+.headding{
+    font-family:  Georgia, serif;
+}
+.card1 {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: fit-content;
+	margin-left:35%;
+    background-color:white;
+    border-radius:20px;
+  }
+  .card2 {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 20%;
+	margin-left:5%;
+	background-color:white;
+    border-radius:10px;
+    margin-top: 10%;
+    font-family: "Audiowide";
+    animation: mymove1 1.5s 1;
+  }
+  @keyframes mymove1 {
+  50% {transform: rotate(-180deg);}
+}
+  
+  .card3 {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 60%;
+	margin-left:5%;
+	background-color:white;
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius:10px;
+    margin-top: 10%;
+    font-family: "Audiowide";
+    animation: mymove2 1.75s 1;
+  }
+  @keyframes mymove2 {
+  50% {transform: rotate(180deg);}
+}
+  .card1:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card2:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card3:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+	padding: 2px 16px;
+  }
+  .topnav {
+  overflow: hidden;
+  background-color:rgba(255, 255, 255, 0.2);
+  /* width:90% */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 3%;
+  width: 10%;
+}
+
+.topnav a:hover {
+  color: goldenrod;;
+  font-size: 20px;
+  font-family: 'Audiowide';
+}
+
+.topnav a.active {
+  color: white;
+  font-size: 20px;
+  font-family: 'Angkor';
+}
+.topnav a.active:hover {
+  color: goldenrod;
+  font-size: 20px;
+  font-family: 'Audiowide';
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* background-color:rgba(255, 255, 255, 0.2); */
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  font-family: 'Audiowide';
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.sub_row{
+   display: flex;
+   flex-flow: row wrap;
+   margin-left: 25%;
+}
+.sub_row_in{
+  width : fit-content;
+  height : fit-content;
+}
+  </style>
+</head>
+<body id="top1">
+  <div >
+    <div class = "row">
+      <div class="topnav" style="width : 90%"> 
+        <a class = "active" href="/takeattendance" >Home</a>
+        <a href="/course_list" >Courses</a>
+        <a href = "/messenger_faculty">Messenger</a>
+      </div>
+      <div  style = " width:10%; margin-top: 0%; background-color:rgba(255, 255, 255, 0.2);">
+        <div class = "dropdown">
+          <a href = "profile.html"style="border-radius: 30px;width: 100px;margin-left: 40%;"><img src="Static/img/34.png" style="border-radius: 30px;width: 50px;margin-left: 55%;"></a>
+          <div class="dropdown-content">
+            <a href="./profile">Profile</a>
+            <a href="./">Sign Out</a>
+          </div> 
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    
+    
+  </div>
+<div class="row"> 
+<div class="card2">
+    <br>
+    <img src="Static/img/34.png" style="border-radius: 100px; width: 120px;height: 120px;align-items: center;margin-left: 33%;">  
+    <h1 class="card-tittle text-center" style="font-family: Audiowide;"><%=username%></h1><br>
+  </div>
+  <div class="card3" ng-app = "">
+    <h2 class="headding text-primary">Personal information</h2><br>
+    <form name = "form" action = "/updateprofile" method = "POST">
+        <div class = "row">
+            <div class = "col">
+                <p>Username:</p>
+                <p><%=un%></p>
+            </div>
+
+            <div class="col">
+                <p>Name:</p>
+                <input type="text" id="Name" name="Name" ng-model = "Name"  ng-required="true"  class="form-control" placeholder="Enter modified name" />
+                <span ng-show="form.Name.$touched && form.Name.$error.required">Name is required.</span><br/>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col">
+                      <p>Gender : </p>
+                      <input type="radio" id="gender_Male" name="gender" ng-model = 'gender' value="Male" ng-required = "true">
+                      <label for="gender_Male">Male</label>
+                    
+                    
+                      <input type="radio" id="gender_Female" name="gender" value="Female" >
+                      <label for="gender_Female">Female</label>
+            </div>
+            <div class = "col">
+                    <p>Date :</p>
+                    <input type="Date" id="DateofB" name="DateofB" id="DateofB" ng-model = "DateofB" ng-required = "true" />
+                    <!-- <span ng-show = "form.DateofB.$touched && form.DateofB.$error.required">Phone Number is Required</span><br/> -->   
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <p>Email:</p>
+                <input type="email" id="pmail" name="pmail" ng-required = "true" class="form-control" placeholder="Enter modified Email id" />
+                <span ng-show = "form.pmail.$touched && form.pmail.$error.required">Email is Required</span><br/>
+            </div>
+            <div class="col">
+                <p>Phone Number:</p>
+                <input type="number" id="pnumber" name="pnumber" ng-model = "pnumber"  ng-required ="true" class="form-control" class="form-control" placeholder="Enter modified number" maxlength="10"/>
+                <span ng-show = "form.pnumber.$touched && form.pnumber.$error.required">Phone Number is Required</span><br/>
+            </div>
+        </div>
+        
+        <div class = "row">
+            <div class = "col">
+                <p>Section :</p>
+                    <input type="text" id="Section" name="Section" id="Section" ng-model = "Section" ng-required = "true" />
+                    <span ng-show = "form.Section.$touched && form.Section.$error.required">Section is Required</span><br/>
+                    
+                        <button type="submit" class="btn btn-warning" style=" margin-top: 5%; margin-left:10px">
+                            Update
+                        </button>
+                        <a href="/profile" style="margin-left:10px">
+                            <button type="button" class="btn" style=" background-color:grey;color:white;  margin-top: 5%;">
+                                Cancel
+                              </button>
+                        </a>       
+            <div>
+                
+        </div>
+    </form>
+ 
+</body>
+</html>

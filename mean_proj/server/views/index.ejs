@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Login</title> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <script src="https://kit.fontawesome.com/f76ed4a85d.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="Static/css/login_register.css"></link> 
+    <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function login(event){
+            event.preventDefault(event);
+            var cid = document.getElementById('userName').value;
+            var psw = document.getElementById('password').value;
+            console.log(cid,psw);
+            if(cid == "" || psw == ""){
+                document.getElementById('warn1').style.display = 'block';
+                document.getElementById('warn').innerHTML = "Some fields are empty";
+                
+            }
+            else
+            {
+                document.getElementById('loginf').submit()
+            }
+            
+        }
+    </script>
+    <style>
+        .footer{
+    background-color: transparent;
+    font-family: 'Audiowide';
+    border-radius: 5px;
+    width:9%;
+    margin-left: 45%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+    </style>
+</head>
+<body>
+    <br/>
+    <header>
+        <h class="title">Attendance Management</h>
+        </header>
+    
+    <div class="login">
+        <i class="fa-sharp fa-solid fa-triangle-exclamation" style = "display:none; color:red" id = "warn1"></i><p id = "warn" style = "color:red"></p>
+        
+        <form action = "/login" method="post" id="loginf">
+            <br>
+            <label style = "color:#900C3F; margin-left: -25%;"><i class="fa-solid fa-user"></i> College ID: </label><br/> 
+            <input type="text" id="userName" name="username" placeholder="roll@edu"/><br/>
+            <label style = "color:#900C3F;margin-left: -25%;"><i class="fa-solid fa-key"></i> Password : </label><br/>
+            <input type="password" id="password" name="password" placeholder="ssecretkey" /><br/>
+            <button type="submit" class = "b1" onclick="login(event)">Login</button>
+        </form>
+    </div>
+    <p class = "p1">New Here!<a href = "./register" style = "color:#900C3F">Quick Register</a></p>
+    <div class = "footer">
+        <p>श्रद्धावान लभते ज्ञानं</p>
+        
+    
+    </div>
+    <p class = "p1" style = "color:#900C3F">CB.EN.U4CSE19329</p>
+    
+    <p class = "p1"style = "color:#900C3F"> Kaliki Sidhartha Reddy</p>
+</body> 
